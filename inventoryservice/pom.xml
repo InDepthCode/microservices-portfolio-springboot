@@ -91,27 +91,6 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.flywaydb</groupId>
-                <artifactId>flyway-maven-plugin</artifactId>
-                <version>11.7.2</version>
-                <configuration>
-                    <url>jdbc:mysql://localhost:3307/ticketing</url>
-                    <user>root</user>
-                    <password>admin</password>
-                    <cleanDisabled>false</cleanDisabled>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.mysql</groupId>
-                        <artifactId>mysql-connector-j</artifactId>
-                        <version>8.0.33</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-
-
-
         </plugins>
     </build>
 

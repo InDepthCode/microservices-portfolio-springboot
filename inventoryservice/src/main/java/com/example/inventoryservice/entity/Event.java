@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
+
 @Entity
 @Getter
 @Setter
@@ -32,4 +34,7 @@ public class Event {
     @JoinColumn(name = "venue_id") // Event table mein ek column hai — venue_id.
                                     // Ye column Venue table ke id ko point karta hai (foreign key).
     private Venue  venue;
+
+    @Column(name="ticket_price")
+    private BigDecimal ticketPrice;
 }
