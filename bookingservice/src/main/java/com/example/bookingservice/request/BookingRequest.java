@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class BookingRequest {
 
     private Long userId;
-    private Long bookingId;
+    private Long eventId;
     private Long ticketCount;
 
 }

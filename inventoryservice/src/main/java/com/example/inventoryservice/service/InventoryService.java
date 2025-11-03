@@ -40,6 +40,7 @@ public class InventoryService {
     public VenueInventoryResponse getVenueInformation(Long venueId) {
         final Venue venue = venueRepository.findById(venueId).orElse(null);
 
+        assert venue != null;
         return VenueInventoryResponse.builder()
                 .venueId(venue.getId())
                 .venueName(venue.getName())
@@ -50,9 +51,11 @@ public class InventoryService {
     public EventInventoryResponse getEventInventory(final Long eventId) {
 
         final Event event = eventRepository.findById(eventId).orElse(null);
+        assert event != null;
         return EventInventoryResponse.builder()
                 .event(event.getName())
                 .capacity(event.getTotalCapacity())
+                .ticketPrice(event.getTicketPrice())
                 .venue(event.getVenue())
                 .eventId(event.getId())
                 .build();
