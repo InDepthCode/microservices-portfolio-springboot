@@ -12,6 +12,7 @@
     <modules>
         <module>bookingservice</module>
         <module>inventoryservice</module>
+        <module>orderservice</module>
     </modules>
 
     <properties>
